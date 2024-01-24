@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <h1 id="h1">CONVERTER</h1><br>
+    <div id="div">
+    
+    <select name="" id="s1">
+        <option value="length">length</option>
+        <option value="temp">tempertaure</option>
+
+    </select>
+    <input id= "ip1"type="number" placeholder="num">
+    <select name="" id="f1">
+        <option value="2">meter</option>
+        <option value="3">kilomoter</option>
+        <option value="4">centimeter</option>
+        <option value="5">millimeter</option>
+        <option value="11">celsius</option>
+        <option value="12">kelvin</option>
+        <option value="13">fahrenheit</option>
+    </select>
+    <select name="" id="f2">
+        <option value="7">meter</option>
+        <option value="8">kilomoter</option>
+        <option value="9">centimeter</option>
+        <option value="10">millimeter</option>
+        <option value="14">celsius</option>
+        <option value="15">kelvin</option>
+        <option value="16">fahrenheit</option>
+    </select><br><br>
+    
+    <h2 id="output"></h2>
+    <button type="button" onclick="conversion()">output</button>
+   
+</div>
+    <script>
+        function conversion()
+        {
+            let a=parseInt(document.getElementById("ip1").value);
+            if(s1.value=='length'){
+            
+            
+            
+            
+            
+                                if(f1.value==2){
+                                                        if(f2.value==7){
+                                                            let b=a;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==8){
+                                                            let b=a/1000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==9){
+                                                            let b=a*100;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else{
+                                                            let b=a*1000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                }
+                                if(f1.value==3){
+                                                        if(f2.value==7){
+                                                            let b=a*1000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==8){
+                                                            let b=a;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==9){
+                                                            let b=a*100000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else{
+                                                            let b=a*1000000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                }
+                                if(f1.value==4){
+                                                        if(f2.value==7){
+                                                            let b=a/100;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==8){
+                                                            let b=a/100000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==9){
+                                                            let b=a;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else{
+                                                            let b=a*10;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                }
+                                if(f1.value==5){
+                                                        if(f2.value==7){
+                                                            let b=a/1000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==8){
+                                                            let b=a/1000000;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==9){
+                                                            let b=a/10;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else{
+                                                            let b=a;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                            }
+
+            }
+            else{
+                
+                            if(f1.value==11){
+                                                        if(f2.value==14){
+                                                            let b=a;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==15){
+                                                            let b=a+273.15;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else {
+                                                            
+                                                            let b=(a*9/5)+32;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                    
+                                            }
+                            if(f1.value==12){
+                                                        if(f2.value==14){
+                                                           
+                                                            let b=a-273.15;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==15){
+                                                            let b=a;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else{
+                                                            
+                                                            let b=(a-273.15)*9/5+32;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                    
+                                            }
+                            if(f1.value==13){
+                                                        if(f2.value==14){
+                                                            let b=(a-32)*5/9;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else if(f2.value==15){
+                                                            let b=(a-32)*5/9+273.15;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                        else{
+                                                            let b=a;
+                                                        document.getElementById("output").innerHTML=b;
+                                                        }
+                                                    
+                                            }
+            }
+        }
+    </script>
+</body>
+</html>
